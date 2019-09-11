@@ -19,7 +19,9 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -28,11 +30,16 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "@svgr/rollup": "^4.3.2",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.1",
     "gh-pages": "^2.1.1",
@@ -51,5 +58,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "babel": {}
 }
